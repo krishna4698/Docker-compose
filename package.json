@@ -1,9 +1,11 @@
 {
   "name": "docker-compose",
+  "type":"module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"tsc -b",
+    "docker:dev":"npx prisma migrate dev && node dist/index.js"
   },
   "keywords": [],
   "author": "",
